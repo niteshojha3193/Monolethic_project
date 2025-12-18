@@ -8,6 +8,7 @@ variable "virtual_machine"{
         nic_name=string
         vnet_name=string
         pip_name=string
+        size = string         
         subnet_name=string
     
     }))

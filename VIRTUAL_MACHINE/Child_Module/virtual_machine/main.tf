@@ -33,12 +33,12 @@ resource "azurerm_linux_virtual_machine" "vm-fronted" {
   name                            = each.value.vm_name
   resource_group_name             = each.value.rg_name
   location                        = each.value.location
-  size                            = "Standard_B1s"
+  size                            = each.value.size
   admin_username                  = each.value.username
   admin_password                  = each.value.password
   disable_password_authentication = false
   network_interface_ids = [
-    azurerm_network_interface.nic[each.key].id
+     azurerm_network_interface.nic[each.key].id
   ]
 
   os_disk {
