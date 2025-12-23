@@ -12,7 +12,7 @@ virtual_machine = {
     allocation_method = "Static"
     size           = "Standard_D2s_v3"
     # sku               = "Standard"
-  },
+  }
   vm2 = {
     vm_name           = "backend-vm"
     rg_name           = "amit"
